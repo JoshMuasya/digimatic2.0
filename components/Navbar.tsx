@@ -3,6 +3,13 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import FilledButton from './FilledButton';
+
+const navLinks = [
+  { name: 'HOME', path: '/' },
+  { name: 'SERVICES', path: '/services' },
+  { name: 'ABOUT', path: '/about' },
+];
 
 const Navbar = () => {
   return (
@@ -17,65 +24,57 @@ const Navbar = () => {
         <div className="">
           <Link href="/">
             <motion.div
-                whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    y: -5,
-                    transition: {
-                        type: 'spring',
-                        stiffness: 1000,
-                        damping: 20,
-                    }
-                }}
-                whileTap={{
-                    scale: 1.0,
-                }}
+              whileHover={{
+                scale: 1.1,
+                rotate: 5,
+                y: -5,
+                transition: {
+                  type: 'spring',
+                  stiffness: 1000,
+                  damping: 20,
+                }
+              }}
+              whileTap={{
+                scale: 1.0,
+              }}
             >
-            <Image 
+              <Image
                 src="/logo.png"
                 alt='Logo'
                 width={80}
                 height={40}
                 className="object-contain"
-            />
+              />
             </motion.div>
           </Link>
         </div>
 
         {/* Navigation Links */}
         <div className="space-x-8 hidden md:flex">
-          <Link href="/">
-            <motion.a
-              whileHover={{ scale: 1.1, color: '#683695' }}
-              className="text-[#6AA4D9] text-lg font-medium"
-            >
-              Home
-            </motion.a>
-          </Link>
-          <Link href="/services">
-            <motion.a
-              whileHover={{ scale: 1.1, color: '#683695' }}
-              className="text-[#6AA4D9] text-lg font-medium"
-            >
-              Services
-            </motion.a>
-          </Link>
-          <Link href="/about">
-            <motion.a
-              whileHover={{ scale: 1.1, color: '#683695' }}
-              className="text-[#6AA4D9] text-lg font-medium"
-            >
-              About
-            </motion.a>
-          </Link>
-          <Link href="/contact">
-            <motion.a
-              whileHover={{ scale: 1.1, color: '#683695' }}
-              className="text-[#6AA4D9] text-lg font-medium"
-            >
-              Contact
-            </motion.a>
-          </Link>
+          {navLinks.map((link, index) => (
+            <Link key={index} href={link.path} passHref>
+              <motion.a
+                whileHover={{
+                  scale: 1.1,
+                  color: '#683695',
+                  y: -3,
+                  transition: { type: 'spring', stiffness: 300 },
+                }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.3 }}
+                className="text-[#6AA4D9] text-xl font-bold justify-between"
+              >
+                {link.name}
+              </motion.a>
+            </Link>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div>
+          <FilledButton text={'Contact Us'} />
         </div>
 
         {/* Mobile Hamburger */}

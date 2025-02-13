@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import FilledButton from './FilledButton';
+import MobileNavbar from './MobileNavbar';
 
 const navLinks = [
   { name: 'HOME', path: '/' },
@@ -79,7 +80,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <button className="text-[#6AA4D9] text-3xl">☰</button>
+          <MobileNavbar />
         </div>
       </div>
     </motion.nav>

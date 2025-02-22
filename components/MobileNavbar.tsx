@@ -17,7 +17,7 @@ const MobileNavbar = ({
     ],
     primaryColor = '#6AA4D9',
     backgroundColor = '#1A1A1A',
-    buttonText = 'Contact Us',
+    buttonText = "Let's Talk",
     buttonLink = '/contact',
     socialLinks = {
         facebook: 'https://facebook.com',

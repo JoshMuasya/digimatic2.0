@@ -72,7 +72,7 @@ const Navbar = ({
 
         {/* CTA */}
         <div className="hidden md:flex">
-          <FilledButton text="Contact Us" link="/contact" />
+          <FilledButton text="Let's Talk" link="/contact" />
         </div>
 
         {/* Mobile Hamburger */}

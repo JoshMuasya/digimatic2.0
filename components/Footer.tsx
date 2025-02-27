@@ -37,9 +37,9 @@ const Footer: React.FC<FooterProps> = ({
     linkedin: "https://linkedin.com",
   },
   contactInfo = [
-    { label: "514-463-4463", icon: <BiPhoneCall className="w-5 h-5" /> },
-    { label: "abrahamian@abrahamianavocat.com", icon: <MdAttachEmail className="w-5 h-5" /> },
-    { label: "3090 Boul. le Carrefour, Bureau 200 Laval, Québec H7T 2J7", icon: <FaLocationDot className="w-5 h-5" /> },
+    { label: "+254 798 040 353", icon: <BiPhoneCall className="w-5 h-5" /> },
+    { label: "muasyajoshua07@gmail.com", icon: <MdAttachEmail className="w-5 h-5" /> },
+    { label: "Westlands Commercial Center", icon: <FaLocationDot className="w-5 h-5" /> },
   ],
 }) => {
   return (
@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-gradient-to-b from-[#2B2B2B]/50 via-[#2B2B2B]/50 to-[#683695]/70 backdrop-blur-lg text-white py-6 shadow-[0px_-10px_20px_#683695] rounded-t-[50px] flex flex-col items-center"
+      className="bg-gradient-to-b from-[#2B2B2B]/50 via-[#2B2B2B]/50 to-[#683695]/70 backdrop-blur-lg text-[#D8B4FE] py-6 shadow-[0px_-10px_20px_#683695] rounded-t-[50px] flex flex-col items-center"
     >
       <div className="container mx-auto text-center px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo */}

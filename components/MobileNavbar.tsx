@@ -13,10 +13,10 @@ const MobileNavbar = ({
     menuItems = [
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
-        { label: 'About', href: '/about' }
+        { label: 'About', href: '/about' },
+        { label: 'Contact Us', href: '/contact' }
     ],
-    primaryColor = '#6AA4D9',
-    backgroundColor = '#1A1A1A',
+    primaryColor = '#B3D6F0',
     buttonText = "Let's Talk",
     buttonLink = '/contact',
     socialLinks = {
@@ -45,7 +45,7 @@ const MobileNavbar = ({
     }, [isOpen]);
 
     return (
-        <div className="md:hidden relative z-[70]">
+        <div className="md:hidden relative z-[70]" ref={menuRef}>
             {!isOpen && (
                 <button
                     style={{ color: primaryColor }}
@@ -64,7 +64,10 @@ const MobileNavbar = ({
                         animate={{ x: 0 }}
                         exit={{ x: '-100%' }}
                         transition={{ duration: 0.3 }}
-                        style={{ backgroundColor, willChange: "transform" }}
+                        style={{
+                            background: 'linear-gradient(180deg, #3B1B55, #2F5C87)', // Vertical gradient
+                            willChange: "transform"
+                        }}
                         className="fixed top-0 left-0 h-screen w-2/3 text-white shadow-lg z-[70] p-6 flex flex-col justify-between"
                     >
                         <div className="flex justify-between items-center">

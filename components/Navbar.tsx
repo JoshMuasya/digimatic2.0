@@ -14,6 +14,7 @@ const Navbar = ({
     { name: "HOME", path: "/" },
     { name: "SERVICES", path: "/services" },
     { name: "ABOUT", path: "/about" },
+    { name: "CONTACT US", path: "/contact" },
   ], []);
 
   return (
@@ -21,8 +22,14 @@ const Navbar = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full p-5 bg-transparent z-50"
-      style={{ willChange: "opacity" }}
+      className="fixed top-0 left-0 w-full p-5 z-50"
+      style={{
+        willChange: "opacity",
+        background: "linear-gradient(90deg, rgba(104, 54, 149, 0.2), rgba(106, 164, 217, 0.2))", // Gradient with low opacity
+        backdropFilter: "blur(10px)", // Frosted glass effect
+        WebkitBackdropFilter: "blur(10px)", // Safari support
+        borderBottom: "1px solid rgba(106, 164, 217, 0.3)", // Subtle border for definition
+      }}
     >
       <div className="flex justify-between items-center">
         {/* Logo */}

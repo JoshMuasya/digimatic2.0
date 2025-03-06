@@ -22,3 +22,18 @@ export interface SolutionsSectionProps {
   ctaText?: string;
   ctaLink?: string;
 }
+
+export interface Project {
+  title: string;
+  description: string;
+  thumbnail: string;
+  link: string;
+}
+
+export interface ProjectsSectionProps {
+  projects: Project[];
+  ctaText?: string;
+  ctaLink?: string;
+  primaryColor?: string;
+  accentColor?: string;
+}

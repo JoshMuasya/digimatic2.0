@@ -41,7 +41,7 @@ const SolutionsSection: React.FC<SolutionsSectionProps> = ({
 
     return (
         <section
-            className="w-full py-16"
+            className="w-full py-16 shadow-[0px_-10px_20px_#683695] rounded-t-[50px]"
             style={{ background: backgroundGradient }}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

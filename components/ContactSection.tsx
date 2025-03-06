@@ -35,11 +35,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission (replace with actual API call)
-    console.log("Form submitted:", formData);
+    console.log("Form submitted:", formData); // Replace with API call
     setIsSubmitted(true);
-    setFormData({ name: "", email: "", message: "" }); // Reset form
-    setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3s
+    setFormData({ name: "", email: "", message: "" });
+    setTimeout(() => setIsSubmitted(false), 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,7 +48,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   return (
     <section
       className="w-full py-16"
-      style={{ background: "linear-gradient(90deg, #683695, #6AA4D9)" }}
+      style={{ background: "linear-gradient(180deg, #2A2A57, #1A1A1A)" }} // Darker, consistent gradient
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.h2
@@ -64,7 +63,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           initial="hidden"
           animate="visible"
           variants={bannerVariants}
-          className="text-[rgba(163,191,250,0.9)] text-lg mb-8"
+          className="text-gray-400 text-lg mb-8" // Softer gray for subtext
         >
           {subtext}
         </motion.p>
@@ -73,7 +72,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           initial="hidden"
           animate="visible"
           variants={formVariants}
-          className="max-w-lg mx-auto bg-[rgba(104,54,149,0.1)] backdrop-blur-md border border-[rgba(106,164,217,0.3)] rounded-lg p-6"
+          className="max-w-lg mx-auto bg-[rgba(42,42,87,0.2)] backdrop-blur-lg border border-[rgba(106,164,217,0.5)] rounded-xl p-8 shadow-lg" // Darker glass
         >
           {isSubmitted ? (
             <p className="text-white text-lg">Thank you! We’ll get back to you soon.</p>
@@ -87,7 +86,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   onChange={handleChange}
                   placeholder="Your Name"
                   required
-                  className="w-full px-4 py-2 bg-transparent border border-[rgba(163,191,250,0.5)] rounded-md text-white placeholder-[rgba(163,191,250,0.7)] focus:outline-none focus:border-[#6AA4D9]"
+                  className="w-full px-4 py-3 bg-[rgba(26,26,26,0.5)] border border-[rgba(106,164,217,0.3)] rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#6AA4D9] transition-all"
                 />
               </div>
               <div>
@@ -98,7 +97,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   onChange={handleChange}
                   placeholder="Your Email"
                   required
-                  className="w-full px-4 py-2 bg-transparent border border-[rgba(163,191,250,0.5)] rounded-md text-white placeholder-[rgba(163,191,250,0.7)] focus:outline-none focus:border-[#6AA4D9]"
+                  className="w-full px-4 py-3 bg-[rgba(26,26,26,0.5)] border border-[rgba(106,164,217,0.3)] rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#6AA4D9] transition-all"
                 />
               </div>
               <div>
@@ -109,7 +108,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   placeholder="Your Message"
                   required
                   rows={4}
-                  className="w-full px-4 py-2 bg-transparent border border-[rgba(163,191,250,0.5)] rounded-md text-white placeholder-[rgba(163,191,250,0.7)] focus:outline-none focus:border-[#6AA4D9]"
+                  className="w-full px-4 py-3 bg-[rgba(26,26,26,0.5)] border border-[rgba(106,164,217,0.3)] rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#6AA4D9] transition-all"
                 />
               </div>
               <motion.button

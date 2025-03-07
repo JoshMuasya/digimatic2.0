@@ -48,22 +48,22 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Techify E-Commerce Platform",
-      description: "A seamless multi-vendor e-commerce platform built with Next.js and integrated payment gateways.",
-      thumbnail: "/projects/techify.png",
-      link: "/projects/techify",
+      title: "Nyiha Mathenge Advovates Website",
+      description: "A modern, user-centric law firm website built with Next.js, showcasing legal services with seamless navigation, responsive design, and an engaging user experience.",
+      thumbnail: "/nma.PNG",
+      link: "https://nma-nine.vercel.app",
     },
     {
-      title: "Crypto Wallet App",
-      description: "A secure cryptocurrency wallet app with real-time exchange rates and user-friendly UI.",
-      thumbnail: "/projects/crypto-wallet.png",
-      link: "/projects/crypto-wallet",
+      title: "Joshua Muasya Portfolio",
+      description: "Showcasing innovative software solutions, cutting-edge web applications, and creative designs crafted to deliver seamless user experiences and solve real-world problems.",
+      thumbnail: "/portfolio.PNG",
+      link: "https://josh-muasya.vercel.app/",
     },
     {
-      title: "LegalTech CRM System",
-      description: "A digital solution for law firms to manage clients, appointments, and case files efficiently.",
-      thumbnail: "/projects/legaltech-crm.png",
-      link: "/projects/legaltech-crm",
+      title: "Twilight Luxe Creations",
+      description: "An elegant events management platform showcasing bespoke services in team building, travel, business excursions, and customized training, with a seamless user experience.",
+      thumbnail: "/luxe.PNG",
+      link: "https://twilight-luxe-creations.vercel.app/",
     }
   ];
 
@@ -71,19 +71,19 @@ export default function Home() {
     {
       name: "Joshua Muasya",
       role: "Founder & Lead Developer",
-      photo: "/team/joshua.png",
+      photo: "/josh.jpeg",
       bio: "Passionate full-stack developer with expertise in web and mobile applications, bringing ideas to life through code and innovation.",
     },
     {
       name: "Faith Njeri",
       role: "UI/UX Designer",
-      photo: "/team/faith.png",
+      photo: "/lady.webp",
       bio: "Creative designer with a keen eye for user-centered designs, transforming concepts into stunning digital experiences.",
     },
     {
       name: "Kevin Maina",
       role: "Cybersecurity Specialist",
-      photo: "/team/kevin.png",
+      photo: "/man.webp",
       bio: "Expert in digital security and data protection, ensuring the safety and privacy of client applications and systems.",
     },
   ];

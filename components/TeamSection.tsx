@@ -66,7 +66,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
         </motion.h2>
 
         {/* Team */}
-        <div className="flex flex-col md:flex-row justify-around overflow-x-auto space-x-8 pb-4 snap-x snap-mandatory">
+        <div className="flex flex-col md:flex-row md:justify-around justify-center align-middle items-center overflow-x-auto pb-4 snap-x snap-mandatory">
           {team.map((member, index) => (
             <motion.div
               key={member.name}

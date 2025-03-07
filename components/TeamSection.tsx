@@ -23,7 +23,7 @@ interface TeamSectionProps {
 const defaultProps: Partial<SolutionsSectionProps> = {
   primaryColor: "#6AA4D9", // Light blue from your theme
   accentColor: "#683695", // Midnight purple from your theme
-  ctaText: "See All Projects",
+  ctaText: "Get a Quote",
   ctaLink: "/services",
 };
 
